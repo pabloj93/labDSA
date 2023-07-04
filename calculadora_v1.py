@@ -5,7 +5,7 @@
 
 print("\n******************* Calculadora em Python *******************")
 
-print("Calculadora simples em Python! É possível fazer contas de adição (+), subtração (-), multiplicação (*) e divisão (/).")
+print("Calculadora simples em Python! É possível fazer operações matemáticas de adição (+), subtração (-), multiplicação (*) e divisão (/).")
 
 def soma(a,b):
     return a+b
@@ -22,12 +22,12 @@ def divisao(a,b):
         b = float(input("Digite um divisor diferente de zero:"))
     return a/b
 
-parcial = float(input("Digite o primeiro número da conta:"))
+parcial = float(input("Digite o primeiro número da operação matemática:"))
 
-conta = input("Digite o tipo de conta que quer fazer (+|-|*|/):")
+conta = input("Digite a operação matemática que quer fazer (+|-|*|/):")
 
 while conta != "=":
-    b = float(input("Digite o próximo número da conta:"))
+    b = float(input("Digite o próximo número da operação matemática:"))
     if conta == "+":
         parcial = soma(parcial, b)
         print("O resultado parcial é %s"%(parcial))
@@ -40,9 +40,9 @@ while conta != "=":
     elif conta == "/":
         parcial = divisao(parcial, b)
         print("O resultado parcial é %s"%(parcial))
-    else: print ("Tipo de conta inexistente.")
+    else: print ("Operação matemática inexistente.")
     
-    conta = input("Digite o tipo de conta que quer fazer (+|-|*|/) ou = para obter o resultado final:")
+    conta = input("Digite a operação matemática que quer fazer (+|-|*|/) ou = para obter o resultado final:")
 
 total = parcial
 print("O resultado final é %s"%(total))
